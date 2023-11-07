@@ -1,8 +1,8 @@
 <script setup>
-
 import getPostBySlug from '@/cms/queries/post'
-const route = useRoute()
+import ComponentAdapter from '@/adapters/ComponentAdapter'
 
+const route = useRoute()
 const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: route.params.slug })
 
 

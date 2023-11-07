@@ -29,7 +29,6 @@
 export default gql`
 query getPostBySlug($slug: String) {
   post(filter: {slug: {eq: $slug}}) {
-    slug
     heroBlock {
       title
       slug
@@ -50,8 +49,21 @@ query getPostBySlug($slug: String) {
         id
         richtext
       }
+      ... on RichtextMediaBlockRecord {
+        id
+        layout
+        richtextComponent {
+          richtext
+        }
+        mediaComponent {
+          media {
+            url
+            alt
+          }
+        }
+      }
     }
-
+    slug
   }
 }
 `
