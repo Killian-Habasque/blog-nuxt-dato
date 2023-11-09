@@ -1,11 +1,10 @@
 export default gql`
-query MyHeader {
+query getHeader {
   header {
     logo {
       url
       alt
     }
-    
     navigation {
       navslug
       navlabel

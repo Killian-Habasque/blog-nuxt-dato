@@ -4,8 +4,6 @@ import ComponentAdapter from '@/adapters/ComponentAdapter'
 
 const route = useRoute()
 const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: route.params.slug })
-
-console.log(data)
 </script>
 
 <template v-if="route && !pending">
@@ -14,7 +12,6 @@ console.log(data)
         <v-container>
             <!-- <p>Blog - {{ $route.params.slug }}</p> -->
             <div v-for="(component, index) in data.post.content" :key="index">
-                {{ console.log(component) }}
                 <ComponentAdapter :component="component"></ComponentAdapter>
             </div>
         </v-container>

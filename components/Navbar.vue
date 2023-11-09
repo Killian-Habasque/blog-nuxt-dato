@@ -1,14 +1,13 @@
 <script setup>
-// import getNavbar from '@/cms/queries/navbar'
-// const { data, pending, error } = await useLazyAsyncQuery(getNavbar)
+ defineProps(['dataNav'])
 </script>
 
 <template>
-    <!-- <div class="d-flex" v-if="!pending">
-        <div v-for="(item, index) in data.homepage.navbar" :key="index">
-            <NuxtLink :to="item.navigationSlug">
-                {{ item.navigationLabel }}
+    <div class="d-flex" v-if="!pending">
+        <div v-for="(item, index) in dataNav" :key="index">
+            <NuxtLink :to="'/' + item.navslug">
+                {{ item.navlabel }}
             </NuxtLink>
         </div>
-    </div> -->
+    </div>
 </template>
