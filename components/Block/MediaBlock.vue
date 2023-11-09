@@ -3,5 +3,7 @@ defineProps(['component'])
 </script>
 
 <template>
-    <img width="300" :src="component.media.url"/>
+    <div class="block__group media">
+        <v-img :src="component.media.url" max-height="400"></v-img>
+    </div>
 </template>

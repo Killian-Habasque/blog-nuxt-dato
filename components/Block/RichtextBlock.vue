@@ -4,5 +4,7 @@ defineProps(['component'])
 </script>
 
 <template>
-    <MarkdownRenderer :markdownContent="component.richtext" />
+    <div class="block__group richtext">
+        <MarkdownRenderer :markdownContent="component.richtext" />
+    </div>
 </template>

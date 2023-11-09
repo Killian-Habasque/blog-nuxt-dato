@@ -9,11 +9,13 @@ const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: 
 </script>
 
 <template v-if="route && !pending">
-    <div v-if="data">
-        <p>Blog - {{ $route.params.slug }}</p>
-        <div v-for="(component, index) in data.post.content" :key="index">
-            {{ console.log(component) }}
-            <ComponentAdapter :component="component"></ComponentAdapter>
+    <v-container>
+        <div v-if="data">
+            <p>Blog - {{ $route.params.slug }}</p>
+            <div v-for="(component, index) in data.post.content" :key="index">
+                {{ console.log(component) }}
+                <ComponentAdapter :component="component"></ComponentAdapter>
+            </div>
         </div>
-    </div>
+    </v-container>
 </template>
