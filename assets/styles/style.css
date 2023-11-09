@@ -2,3 +2,7 @@
 /* .block__container {
     background: gray;
 } */
+
+.block__container img, .block__group img {
+    border-radius: 20px;
+}

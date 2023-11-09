@@ -1,24 +1,28 @@
 export default gql`
 query getBlog {
   blog {
-    heroBlock {
+    title
+    slug
+    backgroundimage {
+      url
+      alt
+    }
+    seo {
+      twitterCard
       title
-      backgroundImage {
-        alt
+      description
+      image {
         url
       }
-      slug
     }
   }
   allPosts {
     id
-    heroBlock {
-      title
-      backgroundImage {
-        url
-        alt
-      }
-      slug
+    title
+    slug
+    backgroundimage {
+      url
+      alt
     }
   }
 }

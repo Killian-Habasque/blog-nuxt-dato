@@ -1,10 +1,13 @@
 <script setup>
- defineProps(['dataHero'])
+ defineProps(['dataTitle', 'dataImage'])
 </script>
 
 <template>
     <div>
-        <h1 class="blog-header">{{ dataHero.title }}</h1>
-        <img src="" alt="" />
+        <v-img :src="dataImage.url" cover max-height="300"></v-img>
+        <v-container>
+            <Breadcrumbs></Breadcrumbs>
+            <h1 class="text-h2 ma-4">{{ dataTitle }}</h1>
+        </v-container>
     </div>
 </template>
