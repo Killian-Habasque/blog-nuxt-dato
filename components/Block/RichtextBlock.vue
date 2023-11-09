@@ -4,6 +4,6 @@ defineProps(['component'])
 
 <template>
     <div class="block__group richtext ma-5">
-        <p v-html="component.richtext"></p>
+        <div v-html="component.richtext"></div>
     </div>
 </template>
