@@ -1,0 +1,94 @@
+@mixin text-style($category) {
+
+    @if $category =="title" {
+        font-size: $size-title;
+        font-family: $font-label;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.25em;
+        letter-spacing: 0;
+
+        @media #{$md} {
+            font-size: $size-title--responsive;
+        }
+    }
+
+    @else if $category =="subtitle" {
+        font-size: $size-subtitle;
+        font-family: $font-label;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.25em;
+        letter-spacing: 0;
+
+        @media #{$md} {
+            font-size: $size-subtitle--responsive;
+        }
+    }
+
+
+    @else if $category =="paragraph" {
+        font-size: $size-paragraph;
+        font-family: $font-label;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5em;
+    }
+
+    @else if $category =="cta" {
+        font-size: $size-cta;
+        font-family: $font-label;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25em;
+    }
+
+    @else if $category =="label" {
+        font-size: $size-label;
+        font-family: $font-label;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.25em;
+    }
+
+}
+
+
+/*
+ * Classes defintion
+ */
+.txt {
+    &__title {
+        @include text-style("title");
+    }
+
+    &__subtitle {
+        @include text-style("subtitle");
+    }
+
+    &__paragraph {
+        @include text-style("paragraph");
+    }
+
+    &__cta {
+        @include text-style("cta");
+    }
+
+    &__label {
+        @include text-style("label");
+    }
+}
+
+h1,
+h2 {
+    @include text-style("title");
+}
+
+h3,
+h4 {
+    @include text-style("subtitle");
+}
+
+p {
+    @include text-style("paragraph");
+}

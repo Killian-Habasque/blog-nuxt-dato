@@ -1,0 +1,16 @@
+/*
+ * Grid generator
+ */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: $spacer-sm;
+    column-gap: $spacer-sm;
+}
+
+
+@for $n from 2 through 12 {
+    .grid-#{$n} {
+        grid-column: span #{$n};
+    }
+}

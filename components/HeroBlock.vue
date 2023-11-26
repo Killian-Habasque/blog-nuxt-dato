@@ -1,13 +1,13 @@
 <script setup>
- defineProps(['dataTitle', 'dataImage'])
+defineProps(['dataTitle', 'dataImage'])
 </script>
 
 <template>
-    <div>
-        <v-img :src="dataImage.url" cover max-height="300"></v-img>
-        <v-container>
-            <Breadcrumbs></Breadcrumbs>
-            <h1 class="text-h2 ma-4">{{ dataTitle }}</h1>
-        </v-container>
+    <div class="hero__post container__lg center">
+        <div class="img__group">
+            <img :src="dataImage.url" alt="">
+        </div>
+        <Breadcrumbs></Breadcrumbs>
+        <h1 class="txt__title">{{ dataTitle }}</h1>
     </div>
 </template>

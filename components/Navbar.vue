@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div class="d-flex" v-if="!pending">
+    <div class="navbar__group" v-if="!pending">
         <div v-for="(item, index) in dataNav" :key="index">
-            <NuxtLink :to="'/' + item.navslug">
+            <NuxtLink :to="'/' + item.navslug" class="navbar__item">
                 {{ item.navlabel }}
             </NuxtLink>
         </div>

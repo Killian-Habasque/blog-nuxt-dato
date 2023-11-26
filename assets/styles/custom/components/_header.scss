@@ -1,0 +1,14 @@
+.header {
+    padding: $spacer-sm;
+    position: fixed;
+    z-index: 20;
+
+    .header__group {
+        background: $color-primary;
+        padding: $spacer-sm $spacer-lg;
+        border-radius: 64px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

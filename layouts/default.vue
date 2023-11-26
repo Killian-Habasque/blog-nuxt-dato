@@ -1,9 +1,9 @@
 <template>
-    <v-app>
+    <div>
         <Header />
-        <v-main class="main__container bg-blue-grey-lighten-5">
+        <main>
             <NuxtPage />
-        </v-main>
-    </v-app>
+        </main>
+    </div>
 </template>
   

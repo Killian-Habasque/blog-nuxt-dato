@@ -1,0 +1,51 @@
+
+/* Light */
+@font-face {
+    font-family: #{$font-label};
+    src: url("#{$font-url}/#{$font-filename-light}") format('truetype');
+    font-style: normal;
+    font-weight: 200;
+}
+
+/* Regular */
+@font-face {
+    font-family: #{$font-label};
+    src: url("#{$font-url}/#{$font-filename-regular}") format('truetype');
+    font-style: normal; 
+    font-weight: 400;
+}
+
+
+/* Medium */
+@font-face {
+    font-family: #{$font-label};
+    src: url("#{$font-url}/#{$font-filename-medium}") format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Demibold */
+@font-face {
+    font-family: #{$font-label};
+    src: url("#{$font-url}/#{$font-filename-demibold}") format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Bold */
+@font-face {
+    font-family: #{$font-label};
+    src: url("#{$font-url}/#{$font-filename-bold}") format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+
+/* Extra bold */
+@font-face {
+    font-family: #{$font-label};
+    src: url("#{$font-url}/#{$font-filename-extrabold}") format('truetype');
+    font-style: normal;
+    font-weight: 900;
+}

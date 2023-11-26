@@ -1,0 +1,75 @@
+@mixin container-style($layout) {
+    margin-left: auto;
+    margin-right: auto;
+    scroll-margin-top: 150px;
+
+    @if $layout =="full" {
+        width: 100%;
+    }
+
+    @else if $layout =="large" {
+        max-width: $max-width-lg;
+        width: $width-lg;
+        padding: $spacer-sm;
+    }
+
+    @else if $layout =="medium" {
+        max-width: $max-width-md;
+        width: $width-md;
+        @media #{$md}{
+            padding: $spacer-md;
+        }
+    }
+
+    @else if $layout =="small" {
+        max-width: $max-width-sm;
+        width: $width-sm;
+    }
+
+    @media #{$md} {
+        width: 100%;
+    }
+}
+
+
+/*
+ * Classes defintion
+ */
+.container {
+    &__full {
+        @include container-style("full");
+    }
+
+    &__lg {
+        @include container-style("large");
+    }
+
+    &__md {
+        @include container-style("medium");
+    }
+
+    &__sm {
+        @include container-style("small");
+    }
+}
+.inner__container{
+    &__lg-spacing {
+        > * + * {
+            margin-top: $spacer-lg;
+        }
+    }
+    &__md-spacing {
+        > * + * {
+            margin-top: $spacer-md;
+        }
+    }
+    &__sm-spacing {
+        > * + * {
+            margin-top: $spacer-sm;
+        }
+    }
+    
+}
+.center{
+    text-align: center;
+}

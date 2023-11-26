@@ -1,0 +1,73 @@
+/*
+ * Colors
+ */
+$color-primary: #1E4E4E;
+$color-primary--light: #d4e2d6;
+
+$color-secondary: #AB4E17;
+$color-secondary--light: #CE8414;
+
+$color-light: #F3F3F3;
+$color-dark: #0f0f0f;
+
+$color-white: #FFFFFF;
+
+/*
+ * Global properties
+ */
+$g-transition: 0.25s;
+$g-radius: 10px;
+$g-header-size: 80px;
+
+/*
+ * Breakpoints
+ */
+$sm-w: 450px;
+$md-w: 768px;
+$lg-w: 1280px;
+$xl-w: 1400px;
+
+/*
+ * Spacers
+ */
+$spacer-xs: 0.25rem;
+$spacer-sm: 0.5rem;
+$spacer-md: 1rem;
+$spacer-lg: 2rem;
+$spacer-xl: 4rem;
+
+/*
+ * Fonts
+ */
+$font-url: "assets/fonts/inter";
+$font-label: "Inter";
+
+$font-filename-light: "Inter-Light.ttf";
+$font-filename-regular: "Inter-Regular.ttf";
+$font-filename-medium: "Inter-Medium.ttf";
+$font-filename-demibold: "Inter-SemiBold.ttf";
+$font-filename-bold: "Inter-Bold.ttf";
+$font-filename-extrabold: "Inter-ExtraBold.ttf";
+
+/*
+ * Containers
+ */
+$max-width-lg: 1400px;
+$width-lg: 85%;
+
+$max-width-md: 1200px;
+$width-md: 75%;
+
+$max-width-sm: 1000px;
+$width-sm: 65%;
+
+/*
+ * Texts
+ */
+ $size-title: 67px;
+ $size-title--responsive: 40px;
+ $size-subtitle: 30px;
+ $size-subtitle--responsive: 25px;
+ $size-paragraph: 16px;
+ $size-cta: 16px;
+ $size-label: 12px;

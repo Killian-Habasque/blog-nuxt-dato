@@ -1,0 +1,8 @@
+.navbar__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacer-lg;
+    @include text-style("cta");
+    color: $color-light;
+}

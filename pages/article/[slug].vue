@@ -7,6 +7,14 @@ const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: 
 </script>
 
 <template v-if="route && !pending">
+    <div>
+
+        
+    </div>
+
+
+
+
     <div v-if="data">
         <HeroBlock :dataTitle="data.post.title" :dataImage="data.post.backgroundimage"/>
         <v-container>

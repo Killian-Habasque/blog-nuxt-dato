@@ -1,0 +1,28 @@
+.hero__home {
+    height: 100vh;
+    .txt__group {
+        display: grid;
+        padding: $spacer-lg;
+        place-content: center;
+    }
+    .img__group img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.hero__post {
+    .img__group {
+        width: 100%;
+        height: 150px;
+        border-radius: 25px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
