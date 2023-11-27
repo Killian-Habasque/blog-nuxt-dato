@@ -6,14 +6,7 @@
     .img__group {
         width: 100%;
         height: 150px;
-        border-radius: 25px;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        @include media-style;
     }
     .txt__group {
         padding: $spacer-md;

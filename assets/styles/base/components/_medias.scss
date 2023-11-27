@@ -1,0 +1,13 @@
+@mixin media-style {
+    overflow: hidden;
+    border-radius: $g-radius;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.img__group {
+    @include media-style;
+}

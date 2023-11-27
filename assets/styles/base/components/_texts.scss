@@ -4,9 +4,9 @@
         font-size: $size-title;
         font-family: $font-label;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 1.25em;
-        letter-spacing: 0;
+        letter-spacing: -1.25px;
 
         @media #{$md} {
             font-size: $size-title--responsive;
@@ -19,7 +19,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: 1.25em;
-        letter-spacing: 0;
+        letter-spacing: -1.25px;
 
         @media #{$md} {
             font-size: $size-subtitle--responsive;
@@ -79,16 +79,19 @@
     }
 }
 
-h1,
-h2 {
+h1 {
     @include text-style("title");
 }
-
+h2,
 h3,
 h4 {
     @include text-style("subtitle");
 }
 
 p {
+    @include text-style("paragraph");
+}
+
+ul {
     @include text-style("paragraph");
 }

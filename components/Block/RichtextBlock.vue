@@ -3,7 +3,7 @@ defineProps(['component'])
 </script>
 
 <template>
-    <div class="block__group richtext ma-5">
+    <div class="block__richtext">
         <div v-html="component.richtext"></div>
     </div>
 </template>

@@ -1,0 +1,23 @@
+.block {
+    
+    &__media {
+        @include media-style;
+    }
+    &__richtext {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        * {
+            margin-top: $spacer-sm;
+        }
+    }
+
+    &.grid {
+        grid-gap: $spacer-lg;
+    }
+    &.reverse {
+        direction: rtl;
+    }
+}
