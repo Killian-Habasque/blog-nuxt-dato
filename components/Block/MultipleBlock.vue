@@ -4,14 +4,13 @@ defineProps(['component'])
 // import MediaBlock from '@/components/Block/MediaBlock'
 import ComponentAdapter from '@/adapters/ComponentAdapter'
 import gridAdapter from '@/services/gridAdapter'
-// {{ component }}
-// let gridNumber = gridAdapter(component.gridNumber)
 let test = "";
+
 </script>
 
 <template>
+    {{ test = gridAdapter(component.gridNumber) }}
     <div class="block grid">
-        {{ test = gridAdapter(component.gridNumber) }}
         <div :class="'grid-' + test" v-for="(component, index) in component.blocks" :key="index">
             <ComponentAdapter :component="component"></ComponentAdapter>
 

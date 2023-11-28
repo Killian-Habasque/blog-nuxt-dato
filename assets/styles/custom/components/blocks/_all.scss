@@ -12,6 +12,9 @@
         * {
             margin-top: $spacer-sm;
         }
+        a {
+            @include button-style("primary");
+        }
     }
 
     &.grid {

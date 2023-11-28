@@ -8,6 +8,7 @@ query getHeader {
     navigation {
       navslug
       navlabel
+      button
     }
   }
 }

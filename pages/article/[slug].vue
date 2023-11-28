@@ -10,7 +10,7 @@ const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: 
     <div v-if="data">
         <HeroBlock :dataTitle="data.post.title" :dataImage="data.post.backgroundimage"/>
         <div class="container__full content">
-            <div v-for="(component, index) in data.post.content" :key="index">
+            <div class="container__lg" v-for="(component, index) in data.post.content" :key="index">
                 <ComponentAdapter :component="component"></ComponentAdapter>
             </div>
         </div>

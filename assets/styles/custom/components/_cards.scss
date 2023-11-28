@@ -1,13 +1,18 @@
 .card__container {
-    grid-gap: $spacer-lg;
-     background: $color-secondary;
-     border-radius: 25px;
-
+    grid-gap: $spacer-md;
+    border-radius: $g-radius;
+    height: 100%;
+    min-height: 300px;
+    &:hover {
+        background: $color-light;
+    }
     .img__group {
+        aspect-ratio: 16 / 9;
         width: 100%;
         height: 150px;
         @include media-style;
     }
+
     .txt__group {
         padding: $spacer-md;
     }

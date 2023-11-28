@@ -5,9 +5,9 @@ export default defineNuxtConfig({
     // 'vuetify/lib/styles/main.sass',
     '~/assets/styles/style.css',
   ],
-  build: {
-    transpile: ['vuetify'],
-  },
+  // build: {
+  //   transpile: ['vuetify'],
+  // },
   vite: {
     define: { 'process.env.DEBUG': false, },
   },
