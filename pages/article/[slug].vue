@@ -4,9 +4,13 @@ import ComponentAdapter from '@/adapters/ComponentAdapter'
 
 const route = useRoute()
 const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: route.params.slug })
+
 </script>
 
 <template v-if="route && !pending">
+  <SchemaOrgArticle
+     headline: {{data.post.title}},
+  />
       <Head>
         <Title>{{data.post.title}}</Title>
         <Meta name="description" :content="title" />

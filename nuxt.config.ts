@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     // ...
+    'nuxt-schema-org',
     '@pinia/nuxt',
     '@nuxtjs/apollo'
   ],
@@ -29,5 +30,9 @@ export default defineNuxtConfig({
     clients: {
       default: './config/apollo.ts'
     }
+  },
+  site: {
+    url: 'https://blog-dato.netlify.app/',
+    name: 'Refergo',
   }
 })

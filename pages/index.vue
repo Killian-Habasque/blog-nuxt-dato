@@ -4,31 +4,36 @@ import ComponentAdapter from '@/adapters/ComponentAdapter'
 
 const { data, pending, error } = await useLazyAsyncQuery(getHomepage)
 
-defineArticle({
-  headline: data.post.title,
-  description: 'Article description',
-  image: '/articles/article-title-image.jpg',
-  datePublished: new Date(2020, 19, 1),
-  dateModified: new Date(2020, 19, 1),
-  // attaching an author when the identity is an organization
-  author: {
-    name: 'Harlan Wilton',
-    url: 'https://harlanzw.com',
-  }
-})
+
 </script>
 
 <template v-if="!pending">
     <Head>
-        <!-- <Title>{{ data.post.title }}</Title>
+        <Title>TEST</Title>
         <Meta name="description" :content="title" />
         <Meta property="og:title" :content="title" />
         <Meta property="og:site_name" content="Doowup" />
         <Meta property="og:url" content={url} />
         <Meta property="og:description" content={text} />
-        <Meta property="og:type" content="" />
-        <Meta property="og:image" :content="data.post.backgroundimage" /> -->
+        <Meta property="og:type" content="WebPage" />
+        <Meta property="og:image" content="" />
     </Head>
+    <SchemaOrgArticle 
+        headline: TEST
+        image="/photos/16x9/photo.jpg"
+        :date-published="new Date(2020, 1, 1)"
+        :date-modified="new Date(2020, 1, 1)"
+    />
+    <SchemaOrgArticle
+        type="BlogPosting"
+    />
+    <SchemaOrgOrganization
+        name="My company"
+        logo="/logo.png"
+        :same-as="['https://twitter.com/company']"
+    />
+    <SchemaOrgPerson name="John doe" url="https://johndoe.com" />
+
     <div class="container__lg page-content">
         <div v-for="(component, index) in data.homepage.content" :key="index">
             <ComponentAdapter :component="component"></ComponentAdapter>
