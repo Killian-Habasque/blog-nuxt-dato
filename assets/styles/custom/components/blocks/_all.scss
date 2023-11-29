@@ -1,26 +1,37 @@
 .block {
-    
-    &__media {
-        display: grid;
-        place-content: center;
+    place-content: center;
+
+    &.blk__media {
+        display: flex;
         @include media-style;
     }
-    &__richtext {
-        height: 100%;
+
+    &.blk__richtext {
         display: grid;
-        place-content: center;
+        height: 100%;
+
         * {
             margin-top: $spacer-sm;
         }
+
         a {
             @include button-style("primary");
         }
     }
 
-    &.grid {
+    &.blk__double {
         grid-gap: $spacer-lg;
+
+        &.reverse {
+            direction: rtl;
+
+            &>* {
+                direction: ltr;
+            }
+        }
     }
-    &.reverse {
-        direction: rtl;
-    }
+
+
+
+
 }

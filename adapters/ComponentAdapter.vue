@@ -7,22 +7,8 @@ import MultipleBlock from '@/components/Block/MultipleBlock'
 </script>
 
 <template>
-    <div v-if="component.__typename === 'RichtextBlockRecord'">
-        <RichtextBlock :component="component" />
-    </div>
-    <div v-else-if="component.__typename === 'MediaBlockRecord'">
-        <MediaBlock :component="component" />
-    </div>
-    <div v-else-if="component.__typename === 'RichtextMediaBlockRecord'">
-        <RichtextMediaBlock :component="component" />
-    </div>
-    <div v-else-if="component.__typename === 'RichtextMediaBlockRecord'">
-        <RichtextMediaBlock :component="component"/>
-    </div>
-    <div v-else-if="component.__typename === 'BlockMultipleRecord'">
-        <MultipleBlock :component="component"/>
-    </div>
-    <div v-else>
-        Not A/B/C
-    </div>
+    <RichtextBlock v-if="component.__typename === 'RichtextBlockRecord'" :component="component" />
+    <MediaBlock v-else-if="component.__typename === 'MediaBlockRecord'" :component="component" />
+    <RichtextMediaBlock v-else-if="component.__typename === 'RichtextMediaBlockRecord'" :component="component" />
+    <MultipleBlock v-else-if="component.__typename === 'BlockMultipleRecord'" :component="component" />
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div class="block grid">
+    <div class="block blk_multiple grid">
       <div
         v-for="(block, index) in component.blocks"
         :key="index"
@@ -15,7 +15,7 @@
   import gridAdapter from '@/services/gridAdapter'
   
   const props = defineProps({
-    component: Object // Assure-toi d'ajuster le type selon la structure de tes données
+    component: Object 
   });
 
   </script>

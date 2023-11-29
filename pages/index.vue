@@ -6,10 +6,8 @@ const { data, pending, error } = await useLazyAsyncQuery(getHomepage)
 </script>
 
 <template v-if="!pending">
-    <div class="container__lg page-content">
-        <div v-for="(component, index) in data.homepage.content" :key="index">
-            <ComponentAdapter :component="component"></ComponentAdapter>
-        </div>
+    <div class="container__lg page-content" v-for="(component, index) in data.homepage.content" :key="index">
+        <ComponentAdapter :component="component"></ComponentAdapter>
     </div>
 
 

@@ -1,8 +1,9 @@
 .page-content {
     display: grid;
-    gap: 50px;
+    gap: $spacer-xl;
+    padding-top: calc($g-header-size + $spacer-md);
 
-    &:first-child {
-        height: 100vh;
+    .block:first-of-type {
+        max-height: calc(100vh - $g-header-size - $spacer-md - $spacer-sm);
     }
 }

@@ -5,7 +5,7 @@ import MediaBlock from '@/components/Block/MediaBlock'
 </script>
 
 <template>
-    <div :class="'block grid ' + (component.reverse ? 'reverse' : '')">
+    <div :class="'block blk__double grid ' + (component.reverse ? 'reverse' : '')">
         <div class="grid-6">
             <MediaBlock :component="component.mediaComponent[0]" />
         </div>
