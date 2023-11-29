@@ -43,8 +43,6 @@
         }
     }
 
-    /* Light */
-
     @else if $type =="secondary-stroke" {
         background: transparent;
         color: $color-secondary;
@@ -95,11 +93,6 @@
     }
 
     &__dark {
-        @include button-style("light");
+        @include button-style("dark");
     }
-}
-.wp-block-button__link {
-    font-size: $size-cta;
-
-    @include button-style("secondary");
 }

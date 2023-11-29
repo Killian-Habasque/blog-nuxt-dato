@@ -26,6 +26,18 @@
         }
     }
 
+    @else if $category =="subtitle-sm" {
+        font-size: $size-subtitle-sm;
+        font-family: $font-label;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25em;
+        letter-spacing: -1.25px;
+
+        @media #{$md} {
+            font-size: $size-subtitle-sm--responsive;
+        }
+    }
 
     @else if $category =="paragraph" {
         font-size: $size-paragraph;
@@ -82,10 +94,12 @@
 h1 {
     @include text-style("title");
 }
-h2,
+h2 {
+    @include text-style("subtitle");
+}
 h3,
 h4 {
-    @include text-style("subtitle");
+    @include text-style("subtitle-sm");
 }
 
 p {
@@ -94,4 +108,7 @@ p {
 
 ul {
     @include text-style("paragraph");
+}
+em {
+    font-style: italic;
 }

@@ -1,19 +1,23 @@
 .block {
-    place-content: center;
 
     &.blk__media {
         display: flex;
         @include media-style;
+        max-height: calc(100vh - $g-header-size - $spacer-md - $spacer-sm);
     }
 
     &.blk__richtext {
-        display: grid;
+        display: flex;
         height: 100%;
-
-        * {
+        max-width: $md-w;
+        align-items: center;
+        
+        *:not(:first-child) {
             margin-top: $spacer-sm;
         }
-
+        a {
+            margin-top: $spacer-lg;
+        }
         a {
             @include button-style("primary");
         }
@@ -22,6 +26,9 @@
     &.blk__double {
         grid-gap: $spacer-lg;
 
+        .block {
+            place-content: center;
+        }
         &.reverse {
             direction: rtl;
 
@@ -31,7 +38,10 @@
         }
     }
 
-
-
+    &.blk__multiple {
+        width: 100%;
+        place-content: center;
+        grid-gap: $spacer-lg;
+    }
 
 }

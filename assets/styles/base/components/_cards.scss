@@ -1,0 +1,32 @@
+@mixin card-style($type) {
+    padding: 5%;
+    border-radius: $g-radius;
+    /* Light */
+
+    @if $type =="light" {
+        background: $color-light;
+        color: $color-dark;
+    }
+
+    /* Dark */
+
+    @else if $type =="dark" {
+        background: $color-secondary;
+        color: $color-light;
+    }
+}
+
+
+/*
+ * Classes defintion
+ */
+ .card {
+
+    &__light {
+        @include card-style("light");
+    }
+
+    &__dark {
+        @include card-style("dark");
+    }
+}

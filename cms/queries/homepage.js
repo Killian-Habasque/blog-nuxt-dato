@@ -9,6 +9,7 @@ query getHomepage {
           ... on RichtextBlockRecord {
             id
             richtext(markdown: true)
+            cardStyle
           }
           ... on MediaBlockRecord {
             id
@@ -29,12 +30,14 @@ query getHomepage {
       ... on RichtextBlockRecord {
         id
         richtext(markdown: true)
+        cardStyle
       }
       ... on RichtextMediaBlockRecord {
         id
         reverse
         richtextComponent {
           richtext(markdown: true)
+          cardStyle
         }
         mediaComponent {
           media {

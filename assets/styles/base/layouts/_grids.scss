@@ -12,5 +12,6 @@
 @for $n from 2 through 12 {
     .grid-#{$n} {
         grid-column: span #{$n};
+        display: grid;
     }
 }

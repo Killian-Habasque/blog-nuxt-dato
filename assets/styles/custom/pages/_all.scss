@@ -1,9 +1,17 @@
 .page-content {
     display: grid;
-    gap: $spacer-xl;
-    padding-top: calc($g-header-size + $spacer-md);
+    gap: calc($spacer-xl * 2);
+    padding: calc($g-header-size + $spacer-md) 0;
+    place-items: center;
+    margin-bottom: $spacer-xl;
 
-    .block:first-of-type {
-        max-height: calc(100vh - $g-header-size - $spacer-md - $spacer-sm);
+    &>div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    div:first-child .block {
+        // max-height: calc(100vh - $g-header-size - $spacer-md - $spacer-sm);
     }
 }

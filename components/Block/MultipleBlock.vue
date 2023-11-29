@@ -1,5 +1,5 @@
 <template>
-    <div class="block blk_multiple grid">
+    <div class="block blk__multiple grid">
       <div
         v-for="(block, index) in component.blocks"
         :key="index"
