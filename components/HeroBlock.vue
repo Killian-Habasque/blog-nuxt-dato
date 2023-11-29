@@ -7,7 +7,6 @@ defineProps(['dataTitle', 'dataImage'])
         <div class="img__group">
             <img :src="dataImage.url" alt="">
         </div>
-        <Breadcrumbs></Breadcrumbs>
         <h1 class="txt__title">{{ dataTitle }}</h1>
     </div>
 </template>
