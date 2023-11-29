@@ -7,6 +7,16 @@ const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: 
 </script>
 
 <template v-if="route && !pending">
+      <Head>
+        <Title>{{data.post.title}}</Title>
+        <Meta name="description" :content="title" />
+        <Meta property="og:title" :content="title" />
+        <Meta property="og:site_name" content="Doowup" />
+        <Meta property="og:url" content={url} />
+        <Meta property="og:description" content={text} />
+        <Meta property="og:type" content="" />
+        <Meta property="og:image" :content="data.post.backgroundimage" />
+      </Head>
     <div v-if="data">
         <HeroBlock :dataTitle="data.post.title" :dataImage="data.post.backgroundimage"/>
         <div class="container__full content">
