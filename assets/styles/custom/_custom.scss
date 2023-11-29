@@ -1,8 +1,9 @@
 @import "components/header";
 @import "components/navbar";
-
+@import "components/blocks/all";
 @import "components/blocks/hero";
-@import "layouts/content";
 @import "components/cards";
 
-@import "components/blocks/all";
+@import "layouts/content";
+
+@import "pages/all";

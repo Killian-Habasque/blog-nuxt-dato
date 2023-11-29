@@ -1,0 +1,8 @@
+.page-content {
+    display: grid;
+    gap: 50px;
+
+    &:first-child {
+        height: 100vh;
+    }
+}

@@ -6,15 +6,14 @@ const { data, pending, error } = await useLazyAsyncQuery(getHomepage)
 </script>
 
 <template v-if="!pending">
-<br><br><br><br><br><br><br><br>
-    <div class="container__full">
+    <div class="container__lg page-content">
         <div v-for="(component, index) in data.homepage.content" :key="index">
-
             <ComponentAdapter :component="component"></ComponentAdapter>
         </div>
     </div>
 
-    <div class="hero__home container__full grid">
+
+    <!-- <div class="hero__home container__full grid">
         <div class="txt__group grid-6">
             <div>
                 <h1 class="txt__title">Experience the Ultimate Comfort</h1>
@@ -44,5 +43,5 @@ const { data, pending, error } = await useLazyAsyncQuery(getHomepage)
                 <li>Conception ergonomique</li>
             </ul>
         </div>
-    </div>
+    </div> -->
 </template>

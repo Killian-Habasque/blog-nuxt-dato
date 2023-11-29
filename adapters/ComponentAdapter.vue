@@ -6,7 +6,7 @@ import RichtextMediaBlock from '@/components/Block/RichtextMediaBlock'
 import MultipleBlock from '@/components/Block/MultipleBlock'
 </script>
 
-<template class="container__lg">
+<template>
     <div v-if="component.__typename === 'RichtextBlockRecord'">
         <RichtextBlock :component="component" />
     </div>
@@ -17,10 +17,10 @@ import MultipleBlock from '@/components/Block/MultipleBlock'
         <RichtextMediaBlock :component="component" />
     </div>
     <div v-else-if="component.__typename === 'RichtextMediaBlockRecord'">
-        <RichtextMediaBlock :component="component" />
+        <RichtextMediaBlock :component="component"/>
     </div>
     <div v-else-if="component.__typename === 'BlockMultipleRecord'">
-        <MultipleBlock :component="component" />
+        <MultipleBlock :component="component"/>
     </div>
     <div v-else>
         Not A/B/C

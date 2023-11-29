@@ -1,14 +1,14 @@
 .block {
     
     &__media {
+        display: grid;
+        place-content: center;
         @include media-style;
     }
     &__richtext {
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
+        display: grid;
+        place-content: center;
         * {
             margin-top: $spacer-sm;
         }
