@@ -11,7 +11,18 @@
         justify-content: center;
     }
 
-    div:first-child .block {
-        // max-height: calc(100vh - $g-header-size - $spacer-md - $spacer-sm);
+
+    &__light {
+        display: grid;
+        gap: calc($spacer-xl * 2);
+        padding: calc($g-header-size + $spacer-md) 0;
+        place-items: center;
+        margin-bottom: $spacer-xl;
+
+        
+        background: $color-light;
+        padding: $spacer-xl $spacer-md;
+        border-radius: $g-radius;
+        margin-top: -50px;
     }
 }

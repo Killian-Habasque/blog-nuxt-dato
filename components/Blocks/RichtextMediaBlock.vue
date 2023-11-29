@@ -1,7 +1,7 @@
 <script setup>
 defineProps(['component'])
-import RichtextBlock from '@/components/Block/RichtextBlock'
-import MediaBlock from '@/components/Block/MediaBlock'
+import RichtextBlock from '@/components/Blocks/RichtextBlock'
+import MediaBlock from '@/components/Blocks/MediaBlock'
 </script>
 
 <template>

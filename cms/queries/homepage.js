@@ -37,7 +37,6 @@ query getHomepage {
         reverse
         richtextComponent {
           richtext(markdown: true)
-          cardStyle
         }
         mediaComponent {
           media {
@@ -46,6 +45,26 @@ query getHomepage {
           }
         }
       }
+      ... on BlockRelationPostRecord {
+        id
+        relationPosts {
+          title
+          slug
+          backgroundimage {
+            url
+            alt
+          }
+        }
+      }
+    }
+    seo {
+      description
+      title
+      image {
+        alt
+        url
+      }
+      twitterCard
     }
   }
 }

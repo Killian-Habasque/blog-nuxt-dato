@@ -9,30 +9,20 @@ const { data, pending, error } = await useLazyAsyncQuery(getHomepage)
 
 <template v-if="!pending">
     <Head>
-        <Title>TEST</Title>
-        <Meta name="description" :content="title" />
-        <Meta property="og:title" :content="title" />
-        <Meta property="og:site_name" content="Doowup" />
-        <Meta property="og:url" content={url} />
-        <Meta property="og:description" content={text} />
+        <Title>{{data.homepage.seo.title}}</Title>
+        <Meta name="description" :content="data.homepage.seo.description" />
+        <Meta property="og:title" :content="data.homepage.seo.title" />
+        <Meta property="og:url" :content="$route.name" />
+        <Meta property="og:description" :content="data.homepage.seo.description" />
         <Meta property="og:type" content="WebPage" />
-        <Meta property="og:image" content="" />
+        <Meta property="og:image" :content="data.homepage.seo.image.url" />
     </Head>
-    <SchemaOrgArticle 
-        headline: TEST
-        image="/photos/16x9/photo.jpg"
-        :date-published="new Date(2020, 1, 1)"
-        :date-modified="new Date(2020, 1, 1)"
+
+    <SchemaOrgWebPage 
+        type="WebPage"
+        :name=data.homepage.seo.title
     />
-    <SchemaOrgArticle
-        type="BlogPosting"
-    />
-    <SchemaOrgOrganization
-        name="My company"
-        logo="/logo.png"
-        :same-as="['https://twitter.com/company']"
-    />
-    <SchemaOrgPerson name="John doe" url="https://johndoe.com" />
+
 
     <div class="container__lg page-content">
         <div v-for="(component, index) in data.homepage.content" :key="index">

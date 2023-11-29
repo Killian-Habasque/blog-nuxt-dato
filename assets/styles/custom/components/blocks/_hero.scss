@@ -1,24 +1,10 @@
-.hero__home {
-    height: 100vh;
-
-    .txt__group {
-        display: grid;
-        padding: $spacer-lg;
-        place-content: center;
-    }
-
-    .img__group {
-        margin: $spacer-sm;
-        @include media-style;
-    }
-}
 
 .hero__post {
     height: 100vh;
     display: grid;
     place-items: center;
     place-content: center;
-
+    grid-gap: $spacer-lg;
     .img__group {
         width: 600px;
         height: 300px;
