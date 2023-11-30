@@ -17,5 +17,7 @@
 
     .txt__group {
         padding: $spacer-md;
+        display: grid;
+        gap: $spacer-sm;
     }
 }

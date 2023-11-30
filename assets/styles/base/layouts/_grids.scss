@@ -7,7 +7,7 @@
     row-gap: $spacer-sm;
     column-gap: $spacer-sm;
 
-    @media #{$md}{
+    @media #{$lg}{
         grid-template-columns: 1fr;
     }
 }
