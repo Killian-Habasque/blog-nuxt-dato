@@ -6,8 +6,8 @@
     place-content: center;
     grid-gap: $spacer-lg;
     .img__group {
-        width: 600px;
-        height: 300px;
+        max-width: 600px;
+        max-height: 300px;
         @include media-style;
     }
 }

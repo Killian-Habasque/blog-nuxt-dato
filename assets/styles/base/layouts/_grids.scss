@@ -6,6 +6,10 @@
     grid-template-columns: repeat(12, 1fr);
     row-gap: $spacer-sm;
     column-gap: $spacer-sm;
+
+    @media #{$md}{
+        grid-template-columns: 1fr;
+    }
 }
 
 

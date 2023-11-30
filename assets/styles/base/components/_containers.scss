@@ -16,9 +16,7 @@
     @else if $layout =="medium" {
         max-width: $max-width-md;
         width: $width-md;
-        @media #{$md}{
-            padding: $spacer-md;
-        }
+ 
     }
 
     @else if $layout =="small" {
@@ -28,6 +26,8 @@
 
     @media #{$md} {
         width: 100%;
+        padding-left: $spacer-sm;
+        padding-right: $spacer-sm;
     }
 }
 

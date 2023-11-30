@@ -10,8 +10,5 @@ const { data, pending, error } = await useLazyAsyncQuery(getHeader)
             <Navbar :dataNav="data.header.navigation"/>
         </div>
     </header>
-    <SchemaOrgOrganization
-        name="Refergo"
-        :logo="data.header.logo.url"
-        />
+    <SearchOptimization type="Global" :seo="data.header.logo" />
 </template>
