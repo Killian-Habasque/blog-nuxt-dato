@@ -14,28 +14,27 @@ const currentUrl = ref('');
      <div v-if="type !== 'Global'">
         <Head>
             <Title>{{ seo.title }}</Title>
-            <Meta name="description" :content="seo.description" />
+            <Meta name="description" :content="seo.description ?? ''" />
             <Meta property="og:title" :content="seo.title" />
-            <Meta property="og:url" :content="currentUrl" />
-            <Meta property="og:description" :content="seo.description" />
-            <Meta property="og:type" :content="type" />
-            <Meta property="og:image" :content="seo.image.url" />
+            <Meta property="og:url" :content="currentUrl ?? ''" />
+            <Meta property="og:description" :content="seo.description ?? ''" />
+            <Meta property="og:type" :content="type ?? ''" />
+            <Meta property="og:image" :content="seo.image.url ?? ''" />
         </Head>
 
         <!-- Schema.org -->
         <div v-if="type === 'WebPage'">
             <SchemaOrgWebPage 
-            type="WebPage"
-            :name=seo.title
-            :description="seo.description"
-            :image="seo.image.url"
+            :name="seo.title"
+            :description="seo.description ?? ''"
+            :image="seo.image.url ?? ''"
         />
         </div>
         <div v-else-if="type === 'BlogPosting'" >
             <SchemaOrgArticle 
             headline: {{seo.title}} 
-            :description="seo.description"
-            :image="seo.image.url"
+            :description="seo.description ?? ''"
+            :image="seo.image.url ?? ''"
             :date-published="new Date()" 
             :date-modified="new Date()" />
         </div>
@@ -43,20 +42,21 @@ const currentUrl = ref('');
             <SchemaOrgWebPage 
             type="CollectionPage"
             headline: {{seo.title}} 
-            :description="seo.description"
-            :image="seo.image.url"/>
+            :name="seo.title"
+            :description="seo.description ?? ''"
+            :image="seo.image.url ?? ''"/>
         </div>
     </div>
     <div v-else>
         <SchemaOrgOrganization
             name="Refergo"
-            :logo="seo.url"
+            :logo="seo.url ?? ''"
             :same-as="['https://www.linkedin.com/in/killian-habasque-041841220/']"
         />
         <SchemaOrgWebSite name="My Awesome Website" />
         <SchemaOrgPerson
             name="Killian Habasque"
-            :image="seo.url"
+            :image="seo.url ?? ''"
             :same-as="['https://www.linkedin.com/in/killian-habasque-041841220/']"
         />
     </div>
