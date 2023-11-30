@@ -28,17 +28,13 @@ const currentUrl = ref('');
             type="WebPage"
             :name=seo.title
             :description="seo.description"
-            :url="currentUrl"
             :image="seo.image.url"
         />
         </div>
         <div v-else-if="type === 'BlogPosting'" >
             <SchemaOrgArticle 
-            type="BlogPosting"
             headline: {{seo.title}} 
-            :name=seo.title
             :description="seo.description"
-            :url="currentUrl"
             :image="seo.image.url"
             :date-published="new Date()" 
             :date-modified="new Date()" />
@@ -47,9 +43,7 @@ const currentUrl = ref('');
             <SchemaOrgWebPage 
             type="CollectionPage"
             headline: {{seo.title}} 
-            :name=seo.title
             :description="seo.description"
-            :url="currentUrl"
             :image="seo.image.url"/>
         </div>
     </div>
