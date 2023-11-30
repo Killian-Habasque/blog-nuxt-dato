@@ -10,5 +10,5 @@ const { data, pending, error } = await useLazyAsyncQuery(getHeader)
             <Navbar :dataNav="data.header.navigation"/>
         </div>
     </header>
-    <SearchOptimization type="Global" :seo="data.header.logo" />
+    <!-- <SearchOptimization type="Global" :seo="data.header.logo" /> -->
 </template>
