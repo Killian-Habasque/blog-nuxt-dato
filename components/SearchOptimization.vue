@@ -3,11 +3,11 @@ defineProps(['seo', 'type'])
 
 const currentUrl = ref('');
 
-onMounted(() => {
-  if (process.client) {
-    currentUrl.value = window.location.href;
-  }
-});
+// onMounted(() => {
+//   if (process.client) {
+//     currentUrl.value = window.location.href;
+//   }
+// });
 </script>
 
 <template>
