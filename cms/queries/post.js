@@ -82,11 +82,13 @@ query getPostBySlug($slug: String) {
       ... on RichtextBlockRecord {
         id
         richtext(markdown: true)
+        cardStyle
       }
       ... on RichtextMediaBlockRecord {
         id
         richtextComponent {
           richtext(markdown: true)
+          cardStyle
         }
         mediaComponent {
           media {
@@ -96,14 +98,21 @@ query getPostBySlug($slug: String) {
         }
         reverse
       }
-      ... on BlockRelationPostRecord {
+      ... on BlockMultipleRecord {
         id
-        relationPosts {
-          title
-          slug
-          backgroundimage {
-            url
-            alt
+        gridNumber
+        blocks {
+          ... on RichtextBlockRecord {
+            id
+            richtext(markdown: true)
+            cardStyle
+          }
+          ... on MediaBlockRecord {
+            id
+            media {
+              url
+              alt
+            }
           }
         }
       }

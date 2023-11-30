@@ -14,7 +14,6 @@ const { data, pending, error } = await useLazyAsyncQuery(getBlog)
             </div>
             <h1 class="txt__title">{{ data.blog.title }}</h1>
         </div>
-
         <section class="grid">
             <div v-for="post of data.allPosts" :key="post.id" class="grid-4">
                 <div class="card__container">

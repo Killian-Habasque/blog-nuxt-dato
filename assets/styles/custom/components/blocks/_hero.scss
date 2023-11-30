@@ -1,13 +1,15 @@
 
 .hero__post {
-    height: 100vh;
     display: grid;
     place-items: center;
     place-content: center;
     grid-gap: $spacer-lg;
+
     .img__group {
         max-width: 600px;
-        max-height: 300px;
+        max-height: 400px;
         @include media-style;
     }
+    flex-direction: column;
+    max-height: calc(100vh - $g-header-size - $spacer-md - $spacer-sm);
 }

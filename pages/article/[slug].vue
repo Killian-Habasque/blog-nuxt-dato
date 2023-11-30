@@ -10,18 +10,15 @@ const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: 
 <template v-if="route && !pending">
     <SearchOptimization type="BlogPosting" :seo="data.post.seo" />
 
-    <div>
+    <div class="page-content container__lg">
         <div class="hero__post container__sm center">
             <div class="img__group">
                 <img :src="data.post.backgroundimage.url" :alt="data.post.backgroundimage.alt">
             </div>
             <h1 class="txt__title">{{ data.post.title }}</h1>
         </div>
-        <div class="container__full page-content__light">
-            <div class="container__lg" v-for="(component, index) in data.post.content" :key="index">
-                <ComponentAdapter :component="component"></ComponentAdapter>
-            </div>
+        <div class="container__lg" v-for="(component, index) in data.post.content" :key="index">
+            <ComponentAdapter :component="component"></ComponentAdapter>
         </div>
     </div>
-
 </template>
