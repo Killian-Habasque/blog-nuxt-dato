@@ -8,7 +8,7 @@ const { data, pending, error } = await useLazyAsyncQuery(getPostBySlug, { slug: 
 </script>
 
 <template v-if="route && !pending">
-    <!-- <SearchOptimization type="BlogPosting" :seo="data.post.seo" /> -->
+    <SearchOptimization type="BlogPosting" :seo="data.post.seo" />
 
     <div>
         <div class="hero__post container__sm center">

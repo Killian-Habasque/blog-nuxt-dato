@@ -5,9 +5,8 @@ const { data, pending, error } = await useLazyAsyncQuery(getBlog)
 </script>
 
 <template v-if="!pending">
-    <!-- <SearchOptimization type="CollectionPage" :seo="data.blog.seo" /> -->
-
-
+    <SearchOptimization type="CollectionPage" :seo="data.blog.seo" />
+    
     <div class="page-content container__lg">
         <div class="container__sm center">
             <div class="img__group">
