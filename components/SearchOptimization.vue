@@ -1,13 +1,7 @@
 <script setup>
 defineProps(['seo', 'type'])
 
-const currentUrl = ref('');
 
-// onMounted(() => {
-//   if (process.client) {
-//     currentUrl.value = window.location.href;
-//   }
-// });
 </script>
 
 <template>
@@ -16,7 +10,6 @@ const currentUrl = ref('');
             <Title>{{ seo.title }}</Title>
             <Meta name="description" :content="seo.description ?? ''" />
             <Meta property="og:title" :content="seo.title" />
-            <Meta property="og:url" :content="currentUrl ?? ''" />
             <Meta property="og:description" :content="seo.description ?? ''" />
             <Meta property="og:type" :content="type ?? ''" />
             <Meta property="og:image" :content="seo.image.url ?? ''" />

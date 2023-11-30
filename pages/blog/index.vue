@@ -16,18 +16,7 @@ const { data, pending, error } = await useLazyAsyncQuery(getBlog)
         </div>
         <section class="grid">
             <div v-for="post of data.allPosts" :key="post.id" class="grid-4">
-                <div class="card__container">
-                    <NuxtLink :to="'/article/' + post.slug">
-                        <div class="img__group">
-                            <img :src="post.backgroundimage.url" :alt="post.backgroundimage.alt"/>
-                        </div>
-                        <div class="txt__group">
-                            <h2 class="txt__subtitle">{{ post.title }}</h2>
-                            <p class="txt__paragraph">{{ post.description }}</p>
-                            <div class="txt__cta">Read More ...</div>
-                        </div>
-                    </NuxtLink>
-                </div>
+                <Card :post="post"/>
             </div>
         </section>
     </div>

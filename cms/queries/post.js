@@ -116,6 +116,17 @@ query getPostBySlug($slug: String) {
           }
         }
       }
+      ... on BlockRelationPostRecord {
+        id
+        relationPosts {
+          title
+          slug
+          backgroundimage {
+            url
+            alt
+          }
+        }
+      }
     }
     slug
     backgroundimage {
