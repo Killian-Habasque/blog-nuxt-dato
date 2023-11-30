@@ -48,6 +48,9 @@ const currentUrl = ref('');
         </div>
     </div>
     <div v-else>
+        <Head>
+            <link rel="shortcut icon" :href="seo.url ?? ''">
+        </Head>
         <SchemaOrgOrganization
             name="Refergo"
             :same-as="['https://www.linkedin.com/in/killian-habasque-041841220/']"

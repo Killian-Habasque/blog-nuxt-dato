@@ -5,6 +5,6 @@ defineProps(['component'])
 
 <template>
     <div class="block blk__relation grid">
-      {{ console.log(component.relationPosts) }}
+      <!-- {{ console.log(component.relationPosts) }} -->
     </div>
   </template>

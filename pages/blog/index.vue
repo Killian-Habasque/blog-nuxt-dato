@@ -6,7 +6,7 @@ const { data, pending, error } = await useLazyAsyncQuery(getBlog)
 
 <template v-if="!pending">
     <SearchOptimization type="CollectionPage" :seo="data.blog.seo" />
-    
+
     <div class="page-content container__lg">
         <div class="container__sm center">
             <div class="img__group">
@@ -20,7 +20,7 @@ const { data, pending, error } = await useLazyAsyncQuery(getBlog)
                 <div class="card__container">
                     <NuxtLink :to="'/article/' + post.slug">
                         <div class="img__group">
-                            <img :src="post.backgroundimage.url" />
+                            <img :src="post.backgroundimage.url" :alt="post.backgroundimage.alt"/>
                         </div>
                         <div class="txt__group">
                             <h2 class="txt__subtitle">{{ post.title }}</h2>
