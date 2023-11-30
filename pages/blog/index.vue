@@ -4,9 +4,9 @@ const { data, pending, error } = await useLazyAsyncQuery(getBlog)
 </script>
 
 <template v-if="!pending">
-    <HeroBlock :dataTitle="data.blog.title" :dataImage="data.blog.backgroundimage" />
+    <!-- <HeroBlock :dataTitle="data.blog.title" :dataImage="data.blog.backgroundimage" /> -->
 
-    <div class="container__lg grid">
+    <div class="page-blog container__lg grid">
         <div v-for="post of data.allPosts" :key="post.id" class="grid-4">
             <div class="card__container">
                 <NuxtLink :to="'/article/' + post.slug">

@@ -24,7 +24,7 @@ const { data, pending, error } = await useLazyAsyncQuery(getHomepage)
     />
 
 
-    <div class="container__lg page-content">
+    <div class="page-content container__lg">
         <div v-for="(component, index) in data.homepage.content" :key="index">
             <ComponentAdapter :component="component"></ComponentAdapter>
         </div>
