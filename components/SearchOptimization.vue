@@ -50,10 +50,9 @@ const currentUrl = ref('');
     <div v-else>
         <SchemaOrgOrganization
             name="Refergo"
-            :logo="seo.url ?? ''"
             :same-as="['https://www.linkedin.com/in/killian-habasque-041841220/']"
         />
-        <SchemaOrgWebSite name="My Awesome Website" />
+        <SchemaOrgWebSite name="Refergo" />
         <SchemaOrgPerson
             name="Killian Habasque"
             :image="seo.url ?? ''"
