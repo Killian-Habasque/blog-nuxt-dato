@@ -4,6 +4,8 @@
 
 ![alt text](https://repository-images.githubusercontent.com/715287899/27e1ff73-ae79-42d8-a893-3da95c3ebfb5)
 
+[Lien du site](https://blog-dato.netlify.app/)
+
 Ce projet de cours vise à créer un blog dynamique et optimisé pour le référencement en utilisant Nuxt.js et DatoCMS. L'objectif principal était de manipuler les données avec DatoCMS via des requêtes GraphQL, puis de mettre en forme ces données dans un site web fonctionnel avec Nuxt.js. En outre, le processus de déploiement a été exploré en utilisant Netlify pour la mise en place d'une intégration continue/déploiement continu (CI/CD).
 
 ## Technologies utilisées
@@ -19,3 +21,7 @@ Ce projet de cours vise à créer un blog dynamique et optimisé pour le référ
 * 🔍 Implémentation d'une optimisation SEO pour améliorer la visibilité et le classement sur les moteurs de recherche.
 * 🚀 Utilisation de GraphQL pour récupérer et manipuler les données de manière efficace.
 * 🛠️ Intégration de Nuxt.js pour mettre en forme les données et créer une interface utilisateur interactive.
+
+## Déploiement
+
+Ce projet est configuré pour un déploiement automatique avec Netlify. Chaque push sur la branche principale (main) ou staging (staging) déclenche un déploiement sur Netlify.
